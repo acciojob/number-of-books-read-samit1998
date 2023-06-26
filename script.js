@@ -16,17 +16,15 @@ const library = [
   },
 ];
 
-const numberOfBooksRead = (library) => {
+const numberOfBooksRead = () => {
   // write your code here
-	for (let bookInd in library) {
-    if (library.hasOwnProperty(bookInd)) {
-      if (library[bookInd].readingStatus === true) {
-        count++;
-      }
-    }
-  }
-
-  return count;
+	let ct=0;
+	for (let index = 0; index < library.length; index++) {
+		if (library[index].readingStatus==true) {
+			ct++;
+		}
+	}
+	return ct;
 };
 
 // Do not change the code below
